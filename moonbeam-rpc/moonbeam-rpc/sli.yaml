@@ -1,0 +1,5 @@
+---
+spec_version: '1.0'
+indicators:
+  error_rate: avg(http_request_duration_seconds_count)/60 
+  http_requests: avg(http_request_duration_seconds_count)/600 
