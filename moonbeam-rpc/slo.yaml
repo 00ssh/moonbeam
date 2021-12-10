@@ -1,20 +1,21 @@
 ---
-spec_version: "1.0"
+spec_version: 0.1.0
 comparison:
   compare_with: "single_result"
-filter:
+  include_result_with_score: "pass"
+  aggregate_function: avg
 objectives:
   - sli: "error_rate"
     key_sli: false
     pass:
       - criteria:
-          - "<120"
+          - "<0.95"
     weight: 1
-  - sli: "http_requests"
+  - sli: "throughput"
     key_sli: false
     pass:
       - criteria:
-          - "<20"
+          - "<0.95"
     weight: 1
 total_score:
   pass: "90%"
